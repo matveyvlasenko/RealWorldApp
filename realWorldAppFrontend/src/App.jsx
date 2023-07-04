@@ -1,35 +1,53 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import {
+  createBrowserRouter,
+  RouterProvider,
+}
+  from "react-router-dom";
+//import others html pages
+import Mainpage from './html/mainpage'
+import Settings from './html/settings'
 
+//in this part add the router
+function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
 }
 
-export default App
+
+//this part is necessary to make the router, to be able to access any page
+const router = createBrowserRouter([
+  {
+    //default page
+    path: "/",
+    element: <Mainpage />,
+  },{
+     //signup
+     path: "/signup",
+     element: <Mainpage />,
+  },{
+    //settings
+    path: "/settings",
+    element: <Settings />,
+  },{
+     //accounts
+     path: "/accounts",
+     element: <Mainpage />,
+  },{
+    //make transfers
+    path: "/personal",
+    element: <Mainpage />,
+ }
+]);
+
+
+
+export default App;
+
