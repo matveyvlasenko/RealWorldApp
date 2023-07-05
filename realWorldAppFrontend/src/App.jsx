@@ -11,6 +11,8 @@ import {
 //import others html pages
 import Mainpage from './html/mainpage'
 import Settings from './html/settings'
+import BankAcoount from './html/bankAccounts'
+import Login from './html/login'
 
 //in this part add the router
 function App() {
@@ -26,25 +28,29 @@ function App() {
 const router = createBrowserRouter([
   {
     //default page
-    path: "/Mainpage",
-    element: <Mainpage />,
+    path: "/",
+    element: <Login />,
   },{
      //signup
      path: "/signup",
-     element: <Mainpage />,
+     element: <Login />,
   },{
     //settings
-    path: "/",
+    path: "/setting",
     element: <Settings />,
   },{
      //accounts
-     path: "/accounts",
-     element: <Mainpage />,
+     path: "/",
+     element: <BankAcoount />,
   },{
     //make transfers
     path: "/personal",
-    element: <Mainpage />,
- }
+    element: <Login />,
+ },{
+  //make transfers
+  path: "/login",
+  element: <Login />,
+}
 ]);
 
 

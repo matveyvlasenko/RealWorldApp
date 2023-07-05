@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './css/settings.css';
+import './css/bankAccounts.css';
+
 import ImageDefault from './img/defaultImage.jpg'
 
-const Settings = () => {
+const BankAccounts = () => {
 
     //example use fetch to import data another application
     useEffect(() => {
@@ -16,13 +18,13 @@ const Settings = () => {
     return (
         <div className='Page'>
 
-            <div className="area"></div>
+<div className="area"></div>
             <nav className="main-menu">
                 <ul>
                     <li>
                         <a href="http://localhost:5173/setting">
                             <i id='imageUser'>
-                            <img src={ImageDefault} alt="User" style={{ height: "55px", width: "auto",marginRight:"10px" }} />
+                                <img src={ImageDefault} alt="User" style={{ height: "55px", width: "auto",marginRight:"10px" }} />
                             </i>
                             <span className="nav-text">
                                 Solera@solera.com
@@ -71,30 +73,27 @@ const Settings = () => {
                     </li>
                 </ul>
             </nav>
-
             <div className="header">
                 <h1 >[$] Real World App</h1>
                 <div>
-                <a href="#" className="button_green" style={{marginTop:"1em",float:"left",clear:"both"}}>$ New</a>
+                    <a href="#" className="button_green" style={{marginTop:"1em",float:"left",clear:"both"}}>$ New</a>
                     <a href="#"style={{float:"right",marginTop:"0.5em",padding:"30px",background: "url('https://api.iconify.design/mi/notification.svg') no-repeat center center / contain"
-}}> </a>                </div>
-            </div>
-
-            <div className="container">
-                <div className="content">
-                    <div className="left-section">
-                        <img src={ImageDefault}  alt="Imagen" className="image" />
-                    </div>
-                    <div className="right-section">
-                        <input type="text" placeholder="Name" className="input" />
-                        <input type="text" placeholder="Last Name" className="input" />
-                        <input type="text" placeholder="Email" className="input" />
-                        <input type="text" placeholder="Number" className="input" />
-                        <button className="button">Save</button>
-                    </div>
+}}> </a>
                 </div>
             </div>
 
+            <div className="container" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                <div className="content">
+                    <div className="left-section">
+                        <h1 className='cardTitle'>Bank Accounts</h1>
+                        <h1 className='cardTitle'>Other bank</h1>
+                    </div>
+                    <div className="right-section">
+                        <a href="#" className="button_violet">Create</a>
+                        <a href="#" className="button_blank">Delete</a>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -102,5 +101,4 @@ const Settings = () => {
     );
 }
 
-export default Settings;
-
+export default BankAccounts;
