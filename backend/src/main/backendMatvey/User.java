@@ -34,4 +34,13 @@ public class User {
     public void setUser_name(String user_name) {
         this.user_name = user_name;
     }
+
+       @Override
+    public String toString() {
+        return System.lineSeparator() + "User{" +
+                "first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", user_name='" + user_name + '\'' +
+                '}';
+    }
 }
