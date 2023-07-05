@@ -8,14 +8,14 @@ const Settings = () => {
     useEffect(() => {
         fetch('http://localhost:8081/users')
             .then(res => res.json())
-            .then(data => console.log({data}))
+            .then(data => console.log({ data }))
     }, [])
 
 
 
     return (
         <div className='Page'>
-    
+
             <div className="area"></div>
             <nav className="main-menu">
                 <ul>
@@ -71,11 +71,32 @@ const Settings = () => {
                     </li>
                 </ul>
             </nav>
-           
-            <div class="header">
-                <h1>Header</h1>
-               
+
+            <div className="header">
+                <h1 >[$] Real World App</h1>
+                <div>
+                    <a href="#" className="button_green">Link Button</a>
+                    <a href="#" className="button_green">Link Button</a>
+                </div>
             </div>
+
+            <div className="container">
+                <div className="content">
+                    <div className="left-section">
+                        <img src={ImageDefault}  alt="Imagen" className="image" />
+                    </div>
+                    <div className="right-section">
+                        <input type="text" placeholder="Name" className="input" />
+                        <input type="text" placeholder="Last Name" className="input" />
+                        <input type="text" placeholder="Email" className="input" />
+                        <input type="text" placeholder="Number" className="input" />
+                        <button className="button">Save</button>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     );
 }
