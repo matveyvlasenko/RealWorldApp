@@ -26,7 +26,7 @@ function App() {
 const router = createBrowserRouter([
   {
     //default page
-    path: "/",
+    path: "/Mainpage",
     element: <Mainpage />,
   },{
      //signup
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
      element: <Mainpage />,
   },{
     //settings
-    path: "/settings",
+    path: "/",
     element: <Settings />,
   },{
      //accounts

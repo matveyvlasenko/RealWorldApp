@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './css/settings.css';
 import ImageDefault from './img/defaultImage.jpg'
-import menuImage from './img/menu_image.png'
 
 const Settings = () => {
 
     //example use fetch to import data another application
-    // useEffect(() => {
-    //     fetch('https://pokeapi.co/api/v2/pokemon/'+pokename).then(res => res.json()).then(data => console.log({data}))
-    // }, [pokename])
+    useEffect(() => {
+        fetch('http://localhost:8081/users')
+            .then(res => res.json())
+            .then(data => console.log({data}))
+    }, [])
 
 
 
