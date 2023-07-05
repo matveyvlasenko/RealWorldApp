@@ -21,4 +21,11 @@ public class UsersCollection {
         return user;
     }
 
+    @Override
+    public String toString() {
+        return "UsersCollection{" +
+                "userList=" + userList +
+                '}';
+    }
+
 }
