@@ -7,6 +7,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +29,14 @@ public class BackendApplication {
 
     @GetMapping(path = "/users")
     public User getUsers() {
+    
+    	
+    	
       List<Transferencia> transferencias = new ArrayList<>();
       transferencias.add(new Transferencia("123456789", "John Doe", "solera@solera.com", 100.0));
       transferencias.add(new Transferencia("987654321", "solera@solera.com","Jane Smith",  -50.0));
 
+      
       User user = new User("solera@solera.com", "bootcamp2", transferencias);
       return user;
     }
