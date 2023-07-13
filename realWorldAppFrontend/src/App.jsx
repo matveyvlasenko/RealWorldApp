@@ -10,10 +10,13 @@ import {
   from "react-router-dom";
 //import others html pages
 import Mainpage from './html/mainpage'
-import TransferenciasPage from './html/tranfers'
 import Settings from './html/settings'
-import BankAcoount from './html/bankAccounts'
+import BankAcoount from './html/transfermenu'
 import Login from './html/login'
+import TransferenciasPage from './html/tranfers'
+import NewTransferenciasPage from './html/newTransfer'
+import TransferMenu from './html/transfermenu'
+
 
 //in this part add the router
 function App() {
@@ -40,13 +43,12 @@ const router = createBrowserRouter([
     path: "/setting",
     element: <Settings />,
   },{
-     //accounts
-     path: "/",
-     element: <BankAcoount />,
+     //create new transfer
+     path: "/newTransfer",
+     element: <NewTransferenciasPage />,
   },{
-    //make transfers
-    path: "/personal",
-    element: <Login />,
+    path: "/TransferMenu",
+    element: <TransferMenu />,
  },{
   //make transfers
   path: "/login",

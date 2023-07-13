@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './css/settings.css';
-import './css/bankAccounts.css';
 
 import ImageDefault from './img/defaultImage.jpg'
 
-const BankAccounts = () => {
+const NewTransferenciasPage = () => {
 
     //example use fetch to import data another application
     useEffect(() => {
@@ -82,18 +81,7 @@ const BankAccounts = () => {
                 </div>
             </div>
 
-            <div className="container" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-                <div className="content">
-                    <div className="left-section">
-                        <h1 className='cardTitle'>Bank Accounts</h1>
-                        <h1 className='cardTitle'>Other bank</h1>
-                    </div>
-                    <div className="right-section">
-                        <a href="#" className="button_violet">Create</a>
-                        <a href="#" className="button_blank">Delete</a>
-                    </div>
-                </div>
-            </div>
+          
 
 
 
@@ -101,4 +89,5 @@ const BankAccounts = () => {
     );
 }
 
-export default BankAccounts;
+
+export default NewTransferenciasPage;

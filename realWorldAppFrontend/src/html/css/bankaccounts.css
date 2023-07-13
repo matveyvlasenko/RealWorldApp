@@ -39,7 +39,6 @@
   margin-bottom: 10px;
 }
 
-
 .button_violet {
   width: 120px;
   height: 40px;
@@ -47,11 +46,15 @@
   color: white;
   padding: 3px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
+
 .button_violet:hover {
   background-color: purple;
-};
-
+}
 .button_blank {
   padding: 3px;
   text-align: center;
