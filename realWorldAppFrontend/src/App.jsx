@@ -10,6 +10,7 @@ import {
   from "react-router-dom";
 //import others html pages
 import Mainpage from './html/mainpage'
+import TransferenciasPage from './html/tranfers'
 import Settings from './html/settings'
 import BankAcoount from './html/bankAccounts'
 import Login from './html/login'
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   //make transfers
   path: "/login",
   element: <Login />,
+},{
+  //make transfers
+  path: "/transfers",
+  element: <TransferenciasPage />,
 }
 ]);
 

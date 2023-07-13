@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './css/login.css';
 import './css/settings.css';
-
 function Login(props) {
   const [data, setData] = useState(null); // Stores the fetched data
   const [username, setUsername] = useState(''); // Stores the value of the username input field
@@ -49,39 +48,30 @@ function Login(props) {
       <div className="header">
         <h1>[$] Real World App</h1>
         <div>
-          <a href="#" className="button_green" style={{ marginTop: '1em', float: 'left', clear: 'both' }}>
+          <a href="#" className="button_green">
             $ New
           </a>
-          <a
-            href="#"
-            style={{
-              float: 'right',
-              marginTop: '0.5em',
-              padding: '30px',
-              background: "url('https://api.iconify.design/mi/notification.svg') no-repeat center center / contain",
-            }}
-          ></a>
+          <a href="#" className="notification">
+          </a>
         </div>
       </div>
-      <div className="container" style={{ width:"50vw",marginLeft:"auto",marginRight:"25%"}}>
-        <div className="content" style={{ width: "100%", height: "auto" }}>
+      <div className="container">
+        <div className="content">
           <div className="left-section">
-            {isValid === false ? <span style={{ color: 'red' }}>WRONG NAME OR PASSWORD</span> : ''}
-            <label style={{ marginTop: "10px", float: "left",width:"85%" }}  className="username">
+            {isValid === false ? <span className="error-message">WRONG NAME OR PASSWORD</span> : ''}
+            <label className="username">
               <div>Username:</div>
-              <input className="inputUser" type="text" style={{ marginTop: "10px", float: "left",width:"85%" }} onChange={handleUsernameChange} />
+              <input className="inputUser" type="text" onChange={handleUsernameChange} />
             </label>
-            <label style={{ marginTop: "10px", float: "left",width:"85%" }}  className="password" >
-              <div >Password:</div>
-              <input style={{ marginTop: "10px", float: "left",width:"85%" }} type="password" onChange={handlePasswordChange} />
+            <label className="password">
+              <div>Password:</div>
+              <input type="password" onChange={handlePasswordChange} />
             </label>
             <div>
-              <button type="button" className='button' style={{ marginTop: "10px", float: "left" }}  onClick={handleLogin}>Login</button>
+              <button type="button" className="button" onClick={handleLogin}>Login</button>
             </div>
           </div>
         </div>
-      </div>
-      <div>
       </div>
     </div>
   );
