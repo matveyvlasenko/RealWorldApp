@@ -11,7 +11,6 @@ import {
 //import others html pages
 import Mainpage from './html/mainpage'
 import Settings from './html/settings'
-import BankAcoount from './html/transfermenu'
 import Login from './html/login'
 import TransferenciasPage from './html/tranfers'
 import NewTransferenciasPage from './html/newTransfer'

@@ -18,7 +18,7 @@ const NewTransferenciasPage = () => {
         <div className='Page'>
 
 <div className="area"></div>
-            <nav className="main-menu">
+<nav className="main-menu">
                 <ul>
                     <li>
                         <a href="http://localhost:5173/setting">
@@ -47,7 +47,7 @@ const NewTransferenciasPage = () => {
                         </a>
                     </li>
                     <li className="has-subnav">
-                        <a href="#">
+                        <a href="http://localhost:5173/transfers">
                             <i className="fa fab fa-bitcoin	 fa-2x"></i>
                             <span className="nav-text">
                                 Bank Accounts
@@ -55,7 +55,7 @@ const NewTransferenciasPage = () => {
                         </a>
                     </li>
                     <li className="has-subnav">
-                        <a href="#">
+                        <a href="http://localhost:5173/TransferMenu">
                             <i className="fa far fa-bell	 fa-2x"></i>
                             <span className="nav-text">
                                 Notifications

@@ -22,7 +22,7 @@ const Settings = () => {
                     <li>
                         <a href="http://localhost:5173/setting">
                             <i id='imageUser'>
-                            <img src={ImageDefault} alt="User" style={{ height: "55px", width: "auto",marginRight:"10px" }} />
+                                <img src={ImageDefault} alt="User" style={{ height: "55px", width: "auto",marginRight:"10px" }} />
                             </i>
                             <span className="nav-text">
                                 Solera@solera.com
@@ -46,7 +46,7 @@ const Settings = () => {
                         </a>
                     </li>
                     <li className="has-subnav">
-                        <a href="#">
+                        <a href="http://localhost:5173/transfers">
                             <i className="fa fab fa-bitcoin	 fa-2x"></i>
                             <span className="nav-text">
                                 Bank Accounts
@@ -54,7 +54,7 @@ const Settings = () => {
                         </a>
                     </li>
                     <li className="has-subnav">
-                        <a href="#">
+                        <a href="http://localhost:5173/TransferMenu">
                             <i className="fa far fa-bell	 fa-2x"></i>
                             <span className="nav-text">
                                 Notifications

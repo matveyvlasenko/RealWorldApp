@@ -48,7 +48,7 @@ const TransferMenu = () => {
                         </a>
                     </li>
                     <li className="has-subnav">
-                        <a href="#">
+                        <a href="http://localhost:5173/transfers">
                             <i className="fa fab fa-bitcoin	 fa-2x"></i>
                             <span className="nav-text">
                                 Bank Accounts
@@ -56,7 +56,7 @@ const TransferMenu = () => {
                         </a>
                     </li>
                     <li className="has-subnav">
-                        <a href="#">
+                        <a href="http://localhost:5173/TransferMenu">
                             <i className="fa far fa-bell	 fa-2x"></i>
                             <span className="nav-text">
                                 Notifications
@@ -94,7 +94,7 @@ const TransferMenu = () => {
             </div>
 
 
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="amount">Amount:</label>
             <input
@@ -119,8 +119,8 @@ const TransferMenu = () => {
             Enviar
             <span className="send-icon" />
           </button>
-        </form>
-        {message && <p>{message}</p>}
+        </form> */}
+        {/* {message && <p>{message}</p>} */}
       </div>
     );
 }
