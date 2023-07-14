@@ -19,10 +19,9 @@ function Login(props) {
         console.error('Error fetching data:', error);
       });
   }, []);
-
   const handleLogin = () => {
     // Handles the login process
-    if (data && username === data.name && password === data.password) {
+    if (data && username === data.email && password === data.password) {
       setIsValid(true); // Sets the login validity to true
       if (typeof props.isValidLogin === 'function') {
         props.isValidLogin(true); // Calls the parent component's isValidLogin function with the argument true

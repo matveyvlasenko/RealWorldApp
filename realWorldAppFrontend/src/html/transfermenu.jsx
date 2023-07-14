@@ -94,8 +94,34 @@ const TransferMenu = () => {
             </div>
 
 
-
-        </div>
+            <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="amount">Amount:</label>
+            <input
+              type="number"
+              id="amount"
+              value={amount}
+              onChange={handleAmountChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="user">User:</label>
+            <input
+              type="text"
+              id="user"
+              value={user}
+              onChange={handleUserChange}
+              required
+            />
+          </div>
+          <button type="submit" className="button_send">
+            Enviar
+            <span className="send-icon" />
+          </button>
+        </form>
+        {message && <p>{message}</p>}
+      </div>
     );
 }
 

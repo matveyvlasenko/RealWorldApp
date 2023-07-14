@@ -1,34 +1,48 @@
 package realWorldApp.backend;
 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-@SpringBootTest
+import static org.junit.jupiter.api.Assertions.*;
+
 class BackendApplicationTests {
 
-	//enter with the good email
-	@Test
-	public  void testValidate () {
-		  ChromeDriver driver = new ChromeDriver();
-	        driver.get("http://localhost:5173/");
+    private ChromeDriver driver;
 
-	        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("solera@solera.com");
-	        driver.findElement(By.xpath("//input[@type='password']")).sendKeys("bootcamp2");
-	        driver.findElement(By.xpath("//button[@type='button']")).click();
-	      
-	}
+    @BeforeEach
+    public void setUp() {
+        // Configurar el driver de Chrome
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\isvaku.claure\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        driver = new ChromeDriver();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        // Cerrar el navegador después de cada prueba
+        driver.quit();
+    }
+
+    @Test
+    public void testLogin() {
+        // Navegar a la página de login
+        driver.get("http://localhost:5173");
+
+        // Rellenar el formulario de  login
+        WebElement usernameInput = driver.findElement(By.xpath("//input[@class='inputUser']"));
+        WebElement passwordInput = driver.findElement(By.xpath("//input[@type='password']"));
+        WebElement loginButton = driver.findElement(By.xpath("//button[@type='button']"));
+
+        usernameInput.sendKeys("solera@solera.com");
+        passwordInput.sendKeys("bootcamp2");
+        loginButton.click();
+
+
+        String currentUrl = driver.getCurrentUrl();
+        assertEquals("http://localhost:5173/setting", currentUrl);
+    }
 
 }
